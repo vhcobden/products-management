@@ -1,6 +1,7 @@
-# Productapp
+# Products management
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+I was following this course called [Angular: Getting Started](https://app.pluralsight.com/library/courses/angular-2-getting-started-update/) by Deborah Kurata
 
 ## Development server
 
