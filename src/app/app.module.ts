@@ -7,6 +7,9 @@ import { AppRoutingModule, routedComponents } from './app.route';
 //Services
 import { ProductService } from './products/product.service';
 
+//Guards
+import { ProductGuard } from './products/product.guard';
+
 //Pipes
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 
@@ -28,7 +31,8 @@ import { StarComponent } from './shared/star.component';
         AppRoutingModule
     ],
     providers: [
-        ProductService
+        ProductService,
+        ProductGuard
     ],
     bootstrap: [
         AppComponent
