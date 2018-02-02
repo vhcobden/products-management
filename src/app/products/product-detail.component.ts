@@ -23,9 +23,7 @@ export class ProductDetailComponent implements OnInit {
                 for (let i in products) {
                     if (products[i].productId === parseInt(this._activatedRoute.snapshot.paramMap.get('id'))) {
                         this.product = products[i];
-                        setTimeout(() => {
-                            this.isBusy = false;
-                        }, 1000);
+                        this.isBusy = false;
                         return;
                     }
                 }

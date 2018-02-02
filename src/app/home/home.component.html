@@ -5,17 +5,72 @@
         <h1 class="text-center card-title">Welcome</h1>
       </div>
       <div class="card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aliquid eum nam beatae perspiciatis, unde veritatis,
-          exercitationem nostrum quae vitae consequatur ullam ab labore! Quia eum ab laborum autem nulla?</p>
-        <a class="btn btn-outline-dark" [routerLink]="'/products'">See Products</a>
+        <div class="row">
+          <div class="col-md-3">
+            <strong>Async Operations</strong>
+          </div>
+          <div class="col-md-9">
+            This has
+            <pre class="d-inline">setTimeout</pre> to simulate delay operation
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <strong>Local data</strong>
+          </div>
+          <div class="col-md-9">
+            Make request to local
+            <pre class="d-inline">json</pre> data file by using
+            <pre class="d-inline">http</pre>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <strong>Interface</strong>
+          </div>
+          <div class="col-md-9">
+            Using an interface for product
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <strong>Service</strong>
+          </div>
+          <div class="col-md-9">
+            Get data by using http and reuse those services in components
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <strong>Dependency Injection</strong>
+          </div>
+          <div class="col-md-9">
+            Inject services in some components
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <strong>Route</strong>
+          </div>
+          <div class="col-md-9">
+            Simple route navigation
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <strong>Guard</strong>
+          </div>
+          <div class="col-md-9">
+            Use guard to validate id passed in the url when a user make request to an specific produc.
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <a class="btn btn-outline-dark" [routerLink]="'/products'">See Products</a>
+          </div>
+        </div>
       </div>
-      <div class="card-footer">
-        <p>Developed by Victor Roque</p>
-        <p>Don't forget visit to
-          <a target="_blank" href="https://dhamyc.azurewebsites.net">dhamyc community</a>
-        </p>
-        <p class="text-muted">Victor Roque &copy; 2018</p>
-      </div>
+
     </div>
   </div>
 </div>

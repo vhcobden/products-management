@@ -1,9 +1,3 @@
-<div class="crop" [style.width.px]="starWidth" [title]="rating" (click)="onClick()">
-  <div style="width:80px">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-  </div>
+<div [title]="rating" (click)="onClick()">
+  <i class="fas fa-star" *ngFor="let i of array(numberStars).fill(1)"></i>
 </div>

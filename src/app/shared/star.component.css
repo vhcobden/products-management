@@ -1,18 +1,7 @@
-.material-icons {
-  /* font-size: .9rem;
-  width: 21.5px; */
-  color: crimson;
-}
-
 .crop {
   overflow: hidden;
 }
 
 div {
   cursor: pointer;
-}
-
-div>div div {
-  display: inline-block;
-  width: 20px;
 }

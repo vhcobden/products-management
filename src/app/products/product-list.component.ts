@@ -19,6 +19,7 @@ export class ProductlistComponent implements OnInit {
     products: IProduct[];
     _listFilter: string;
     errorMessage: string;
+    clickedRatingMessage: string;
     filteredProducts: IProduct[];
     isBusy: boolean = true;
     get listFilter(): string {
@@ -37,11 +38,9 @@ export class ProductlistComponent implements OnInit {
             .getProducts()
             .subscribe(
             products => {
-                setTimeout(() => {
-                    this.products = products
-                    this.filteredProducts = this.products;
-                    this.isBusy = false;
-                }, 1000);
+                this.products = products;
+                this.filteredProducts = this.products;
+                this.isBusy = false;
             },
             error => this.errorMessage = <any>error);
     }
@@ -52,7 +51,7 @@ export class ProductlistComponent implements OnInit {
     }
 
     onRatingClicked(message: string): void {
-        this.pageTitle = 'Product list ' + message;
+        this.clickedRatingMessage = message;
     }
 
     performFilter(filterBy: string): IProduct[] {

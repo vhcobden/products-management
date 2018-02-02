@@ -10,7 +10,7 @@ export class ProductGuard implements CanActivate {
     canActivate(
         next: ActivatedRouteSnapshot,
         state: RouterStateSnapshot): boolean {
-        let id = +next.url[1].path;
+        let id = +next.paramMap.get('id');
 
         if (isNaN(id) || id < 1) {
             this.redirectbadRequest();
@@ -26,13 +26,13 @@ export class ProductGuard implements CanActivate {
                 }
                 this.redirectbadRequest();
                 return false;
-            })
+            });
 
         return true;
     }
 
     redirectbadRequest(): void {
-        alert('Invalid product id');
+        console.error('Invalid id');
         this._router.navigate(['/products']);
     }
 }
